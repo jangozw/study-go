@@ -16,8 +16,9 @@ eg: go mod init Test
 ```go
 go get [Pageckage]
 
-# 下载thrift (会下载到默认的GOPATH路径里，不是某一个指定的项目里)，会生成go.sum文件记录包的版本信息
-go get thrift
+# 如下载thrift (会下载到默认的GOPATH路径里，不是某一个指定的项目里)，会生成go.sum文件记录包的版本信息
+# 注意异一定要是github.com开头）
+go get github.com/apache/thrift
 ```
 
 3，拉取依赖包
@@ -25,7 +26,7 @@ go get thrift
 ```go
 
 # 根据项目目录里的go.mod 和 go.sum去拉
-go mod download
+go build
 ```
 
 ### go mod 其他
